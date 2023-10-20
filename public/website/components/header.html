@@ -1,0 +1,43 @@
+{% load static %}
+
+{% load active_link_tags %}
+
+{% load helpers %}
+<header class="navbar" id="navbar">
+    <a href="/" class="logo">
+        <img src="{% static 'images/logo.png' %}" class="image" alt="Logo">
+    </a>
+    <nav class="r-menu">
+        <ul class="n-list" id="menu-list">
+            <li class="n-item">
+                <a href="/" class="n-link {% if request.path == '/' %} active {% endif %}">Home</a>
+            </li>
+            <li class="n-item">
+                <a href="/about-us/" class="n-link {% active_link 'WAboutUs' 'active' %}">About us</a>
+            </li>
+            <li class="n-item">
+                <a href="/contact-us/" class="n-link {% active_link 'WContactUs' 'active' %}">Contact us</a>
+            </li>
+            <li class="n-item">
+                <a href="/blogs/" class="n-link {% active_link 'WBlogs' 'active' %}">Blogs
+                </a>
+            </li>
+            <li class="n-item">
+                <a href="/faqs/" class="n-link {% active_link 'WFaq' 'active' %}">FAQs</a>
+            </li>
+        </ul>
+    </nav>
+    <button class="n-btn bx bx-menu-alt-right" onclick="openNav()"></button>
+</header>
+
+<aside class="sm-sidebar" id="sm-sidebar">
+    <div class="sm-sidebar-wrapper">
+        <div class="sidebar-header">
+            <a href="/" class="logo">
+                <img src="{% static 'images/logo.png' %}" class="image" alt="Logo">
+            </a>
+            <a href="javascript:void(0)" class="closebtn btn btn-light" onclick="closeNav()">&times;</a>
+        </div>
+        <div class="sidebar-body" id="s-menu-list"></div>
+    </div>
+</aside>

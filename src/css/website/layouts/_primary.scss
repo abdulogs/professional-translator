@@ -1,0 +1,15 @@
+.content {
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 1030px) {
+    .content {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        margin-top: 150px;
+    }
+}

@@ -1,0 +1,73 @@
+{% extends 'website/layouts/primary.html' %}
+
+{% load static %}
+
+{% block title %} Contact us - {% endblock %}
+
+{% block seo %} {% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/website/pages/contact/stylesheet.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<main class="content">
+    <section class="breadcrumb">
+        <h1 class="heading">
+            <a href="/" class="bx bx-home t-dark icon"></a>
+            <span class="t-light dash"> - </span> Contact us
+        </h1>
+        <h2 class="sub-heading">Get In Touch.</h2>
+        <p class="description">Drop us a line.</p>
+    </section>
+    <section class="contact-form">
+        <form id="contactform" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="form-group">
+                        <label for="fullname" class="f-label">
+                            <span class="bx bx-user icon"></span>Fullname
+                            <span class="required">*</span>
+                        </label>
+                        <input type="text" class="input-field" id="fullname" name="fullname"
+                            placeholder="Enter your fullname">
+                    </div>
+                </div>
+                <div class="form-col">
+                    <div class="form-group">
+                        <label for="email" class="f-label">
+                            <span class="bx bx-envelope icon"></span>Email
+                            <span class="required">*</span>
+                        </label>
+                        <input type="text" class="input-field" id="email" name="email"
+                            placeholder="Enter your email address..">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="f-label">
+                    <span class="bx bx-phone icon"></span>Phone
+                </label>
+                <input type="text" class="input-field" id="phone" name="phone" placeholder="Enter your mobile number">
+            </div>
+            <div class="form-group">
+                <label for="message" class="f-label">
+                    <span class="bx bx-comment icon"></span>Message
+                    <span class="required">*</span>
+                </label>
+                <textarea class="input-field input-larger" id="message" rows="3" name="message"
+                    placeholder="Write your query"></textarea>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-l btn-p" id="btnsubmit">Send message</button>
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'modules/website/query/index.js' %}"></script>
+{% endblock %}

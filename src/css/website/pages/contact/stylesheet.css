@@ -1,0 +1,188 @@
+.content {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1030px) {
+  .content {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content {
+    margin-top: 150px;
+  }
+}
+button[disabled=disabled],
+button:disabled {
+  background-color: var(--light) !important;
+  color: #000 !important;
+  cursor: not-allowed;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  border-radius: var(--rounded);
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+  box-shadow: var(--shadow);
+  font-size: 14px;
+}
+.btn .icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.btn-p {
+  background-color: var(--secondary);
+  color: #fff;
+  font-size: 14px;
+}
+.btn-p:hover {
+  background-color: var(--primary);
+  color: #000;
+}
+
+.btn-l {
+  padding: 15px 25px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.form-row .form-col {
+  width: 100%;
+}
+.form-row .form-col:first-child {
+  margin-right: 10px;
+}
+.form-row .form-col:last-child {
+  margin-left: 10px;
+}
+
+.form-group {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+.form-group .f-label {
+  font-weight: bolder;
+  color: var(--text-light);
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 0px;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+.form-group .f-label .icon {
+  margin-right: 10px;
+  color: var(--secondary);
+  padding: 5px;
+  border-radius: 50px;
+  background-color: var(--light);
+}
+.form-group .f-label .required {
+  font-size: 20px;
+  color: red;
+  margin-left: 5px;
+}
+.form-group select {
+  -o-webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 5px;
+  border: 1px solid #dfdfdf;
+}
+.form-group .input-field[disabled=disabled],
+.form-group .input-field:disabled {
+  background-color: #EFF3F7 !important;
+  color: #000;
+  cursor: not-allowed;
+}
+.form-group .input-field {
+  padding: 5px 15px;
+  background-color: var(--main);
+  outline: none;
+  border: none;
+  color: var(--text-dark);
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 35px;
+  display: block;
+}
+.form-group .input-field::-moz-placeholder {
+  color: #000;
+}
+.form-group .input-field:-ms-input-placeholder {
+  color: #000;
+}
+.form-group .input-field::placeholder {
+  color: #000;
+}
+.form-group .input-field:-webkit-autofill, .form-group .input-field:-webkit-autofill:hover, .form-group .input-field:-webkit-autofill:focus, .form-group .input-field:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px var(--main) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--main) inset !important;
+}
+.form-group .input-field:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-light) !important;
+}
+.form-group .input-larger {
+  height: 100px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-row .form-col {
+    width: 100%;
+  }
+  .form-row .form-col:first-child {
+    margin-right: 0px;
+  }
+  .form-row .form-col:last-child {
+    margin-left: 0px;
+  }
+}
+.contact-form {
+  padding: var(--container-d);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.contact-form #contactform {
+  width: 40%;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1030px) {
+  .contact-form #contactform {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-form {
+    padding: var(--container-m);
+  }
+  .contact-form #contactform {
+    width: 95%;
+  }
+}/*# sourceMappingURL=stylesheet.css.map */

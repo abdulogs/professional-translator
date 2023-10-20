@@ -1,0 +1,114 @@
+.t-lower {
+    text-transform: lowercase !important;
+
+    &::first-letter {
+        text-transform: uppercase
+    }
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-left {
+    text-align: left;
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+}
+
+.link-p {
+    color: var(--bg-primary);
+
+    &:hover {
+        color: var(--bg-secondary);
+    }
+}
+
+.font-20 {
+    font-size: 20px !important;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.b {
+    border: 1px solid var(--border);
+}
+
+.b-r {
+    border-right: 1px solid var(--border);
+}
+
+.b-l {
+    border-left: 1px solid var(--border);
+}
+
+.b-t {
+    border-top: 1px solid var(--border);
+}
+
+.b-b {
+    border-bottom: 1px solid var(--border);
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+/* Background colors */
+
+
+
+/* text colors */
+.t-dark {
+    color: var(--text-main);
+}
+
+.t-light {
+    color: var(--text-light);
+}
+
+.t-secondary {
+    color: var(--bg-secondary);
+}
+
+.t-primary {
+    color: var(--bg-primary);
+}
+
+.t-white {
+    color: white;
+}
+
+.t-black {
+    color: black;
+}
+
+.ml-5{
+    margin-left:5px ;
+}
+.mr-5{
+    margin-right:5px ;
+}

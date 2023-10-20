@@ -1,0 +1,30 @@
+{% load static %}
+
+{% load helpers %}
+
+
+<footer class="footer">
+    <div class="footer-card">
+        <section class="footer-header">
+            <a href="/" class="logo">
+                <img src="{% static 'images/logo.png' %}" class="image" alt="Logo">
+            </a>
+        </section>
+        <section class="footer-body">
+            <ul class="f-list">
+                <li class="item"><a href="/about-us/" class="link">About us </a></li>
+                <li class="item"><a href="/contact-us/" class="link">Contact us</a></li>
+                <li class="item"><a href="/privacy-policy/" class="link"> Privacy policy</a></li>
+                <li class="item"><a href="/terms-and-conditions/" class="link"> Terms and conditions</a></li>
+                <li class="item"><a href="/faqs/" class="link"> Faqs</a></li>
+            </ul>
+        </section>
+        <section class="footer-footer">
+            <p class="description">&copy; {% now "Y" %} professional translator </p>
+        </section>
+    </div>
+</footer>
+
+<input type="hidden" value="{{csrf_token}}" name="token" id="token">
+
+<div id="response"></div>

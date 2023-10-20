@@ -1,0 +1,33 @@
+@import "../../layouts/primary";
+@import "../../components/buttons";
+@import "../../components/form";
+
+.contact-form {
+    padding: var(--container-d);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+
+    #contactform {
+        width: 40%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .contact-form {
+        #contactform {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-form {
+        padding: var(--container-m);
+        #contactform {
+            width: 95%;
+        }
+    }
+}

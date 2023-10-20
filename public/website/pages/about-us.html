@@ -1,0 +1,47 @@
+{% extends 'website/layouts/primary.html' %}
+
+{% load static %}
+
+{% load helpers %}
+
+{% block title %} About us - {% endblock %}
+
+{% block seo %} {% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/website/pages/about/stylesheet.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<main class="content">
+    <section class="breadcrumb">
+        <h1 class="heading">
+            <a href="/" class="bx bx-home t-dark icon"></a>
+            <span class="t-light dash"> - </span> About us
+        </h1>
+        <h2 class="sub-heading">Stuff About us</h2>
+        <br><br>
+    </section>
+
+    <section class="about-card">
+        <div class="left-col">
+            <div class="dotted-square"></div>
+            <div class="bg"></div>
+            <div class="image">
+                <img src="{% static 'images/about.jpg' %}" class="img" alt="">
+            </div>
+        </div>
+        <div class="right-col">
+            <p class="description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptates facilis iusto nobis!
+                Distinctio, cum. Similique eos, odit perspiciatis repellat quo dolore id atque, illum assumenda nam,
+                velit eum? Consequatur?
+            </p>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+
+{% block scripts %} {% endblock %}

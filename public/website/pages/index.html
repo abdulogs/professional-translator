@@ -1,0 +1,102 @@
+{% extends 'website/layouts/primary.html' %}
+
+{% load static %}
+
+{% load helpers %}
+
+{% block title %} {% endblock %}
+
+{% block seo %} {% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/website/pages/home/stylesheet.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="content">
+    <section class="banner-card">
+        <div class="left-col">
+            <h2 class="heading">Professional language translator in all world languages</h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptatem fugiat iure corporis
+                inventore accusantium? Labore deserunt voluptatibus ad obcaecati culpa! Eligendi veritatis ea vitae
+                excepturi consectetur delectus ab cumque?
+            </p>
+        </div>
+        <div class="right-col">
+            <img src="{% static 'images/banner.jpeg' %}" class="image" alt="">
+        </div>
+    </section>
+    <section class="translator-card">
+        <form class="card-header" id="translate">
+            <div class="col">
+                <select name="translate-to-lang" id="translate-to-lang" class="select-language">
+                    {% for code, language in languages.items %}
+                    {% if code == 'en' %}
+                    <option value="{{ code }}" selected>{{ language.capitalize }}</option>
+                    {% else %}
+                    <option value="{{ code }}">{{ language.capitalize }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <textarea name="translate-to-text" id="translate-to-text" class="form-field" placeholder="Text"
+                    dir="auto"></textarea>
+                <div class="form-panel">
+                    <button class="panel-btn bx bx-clipboard" type="button"
+                        onclick="copyToClipboard('#translate-to-text')"></button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="col">
+                <select name="translate-from-lang" id="translate-from-lang" class="select-language">
+                    {% for code, language in languages.items %}
+                    {% if code == 'ur' %}
+                    <option value="{{ code }}" selected>{{ language.capitalize }}</option>
+                    {% else %}
+                    <option value="{{ code }}">{{ language.capitalize }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <textarea name="translate-from-text" id="translate-from-text" class="form-field"
+                    placeholder="Translation" dir="auto"></textarea>
+                <div class="form-panel">
+                    <button class="panel-btn bx bx-clipboard" type="button"
+                        onclick="copyToClipboard('#translate-from-text')"></button>
+                </div>
+            </div>
+        </form>
+        <div class="card-footer">
+            <button class="btn-tranlsate" form="translate" id="btn-tranlsate">Translate</button>
+        </div>
+    </section>
+    <br><br>
+    <section class="blogs-cards">
+        <div class="section-heading">
+            <div class="dotted square"></div>
+            <h4 class="heading">Our <span class="uline">Blogs</span></h4>
+            <p class="description">You can read our latest articles</p>
+        </div>
+        <div class="blogs-row" id="blogs"></div>
+    </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<!-- Modules -->
+<script src="{% static 'modules/website/translate/index.js' %}"></script>
+<script src="{% static 'modules/website/blog/index.js' %}"></script>
+<script>loadBlogs(page = 1, records = 6);</script>
+
+<div id="content"></div>
+
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).val()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        msgSuccess("Successfully copied text")
+    }
+</script>
+{% endblock %}

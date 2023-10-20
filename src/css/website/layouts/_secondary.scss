@@ -1,0 +1,227 @@
+.content {
+    margin-top: 100px;
+
+    .row {
+        display: flex;
+        align-items: stretch;
+        align-content: center;
+        padding: var(--container-d);
+
+        .col {
+            height: 100%;
+        }
+
+        .left {
+            width: 20%;
+            position: sticky;
+            top: 100px;
+
+            .menu-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                .list-item {
+                    display: block;
+
+                    .list-link {
+                        margin-bottom: 15px;
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        color: var(--text-dark);
+                        font-size: 16px;
+                        font-weight: bold;
+                        position: relative;
+
+                        .badge {
+                            position: absolute;
+                            padding: 5px 7px;
+
+                            font-size: 10px;
+
+                            border-radius: 50px;
+                            box-shadow: var(--shadow);
+                            margin-top: -30px;
+                            margin-left: 20px;
+                        }
+
+                        .badge-p {
+                            color: white;
+                            background-color: var(--bg-primary);
+                        }
+
+                        .badge-s {
+                            color: white;
+                            background-color: var(--bg-secondary);
+                        }
+
+                        .icon {
+                            background-color: var(--bg-light);
+                            padding: 8px;
+                            font-size: 20px;
+                            margin-right: 10px;
+                            border-radius: 50px;
+                        }
+
+                        &:hover {
+                            color: var(--bg-primary);
+                        }
+                    }
+
+                    .active-link {
+                        color: var(--bg-secondary);
+                    }
+                }
+            }
+
+        }
+
+        .right {
+            width: 80%;
+
+            .header {
+                padding: 20px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1030px) {
+    .content {
+        .row {
+            flex-direction: column;
+            align-items: center;
+            padding: var(--container-d);
+
+            .col {
+                height: auto;
+            }
+
+            .left {
+                width: 100%;
+                position: static;
+
+                .menu-list {
+                    display: flex;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: space-between;
+                    overflow-y: auto;
+
+                    &::-webkit-scrollbar {
+                        width: 0px;
+                        height: 0px;
+                    }
+
+                    .list-item {
+
+                        .list-link {
+                            padding: 20px;
+                            border-radius: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            align-content: center;
+                            justify-content: center;
+                            margin: 0 10px;
+
+                            .badge {
+                                margin-top: -37px;
+                                margin-left: 25px;
+                            }
+
+
+                            .icon {
+                                margin: 0px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .active-link {
+                            background-color: #f5f5f5;
+                        }
+                    }
+                }
+
+            }
+
+            .right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .content {
+        .row {
+            padding: var(--container-t);
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .content {
+        margin-top: 130px;
+
+        .row {
+            flex-direction: column;
+            align-items: center;
+            padding: var(--container-m);
+
+            .col {
+                height: auto;
+            }
+
+            .left {
+                width: 100%;
+                position: static;
+
+                .menu-list {
+                    display: flex;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: flex-start;
+                    overflow-y: auto;
+                    margin-bottom: 40px;
+
+                    &::-webkit-scrollbar {
+                        width: 0px;
+                        height: 0px;
+                    }
+
+                    .list-item {
+                        .list-link {
+                            padding: 20px;
+                            border-radius: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            align-content: center;
+                            justify-content: center;
+                            margin: 0 10px;
+
+                            .badge {
+                                margin-top: -37px;
+                                margin-left: 25px;
+                            }
+
+                            .icon {
+                                margin: 0px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+            }
+        }
+    }
+}
